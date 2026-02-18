@@ -1,21 +1,24 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-87B1PT138R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            wait_for_update: 500
+        });
+
+        gtag('config', 'G-87B1PT138R');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5ZDLRBTS');
-    </script>
-    <!-- End Google Tag Manager -->
     <meta name="description" content="WG Ingeniería Eléctrica EIRL: mantenimiento e instalaciones para empresas y condominios en Lima y provincias.">
     <title>WG | Ingeniería Eléctrica EIRL</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +29,6 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZDLRBTS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <div class="topbar">
     <div class="container topbar-wrap">
@@ -297,9 +296,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#contacto">Contacto</a></li>
+            <li><button type="button" id="openCookieSettings" class="cookie-settings-link">Cookies</button></li>
         </ul>
     </div>
 </footer>
+
+<aside id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Preferencias de consentimiento">
+    <div class="cookie-banner-content">
+        <h3>Preferencias de privacidad</h3>
+        <p>
+            Usamos cookies para mejorar tu experiencia y analizar el tráfico del sitio. Puedes aceptar, rechazar o configurar tus preferencias.
+        </p>
+        <div class="cookie-actions">
+            <button type="button" class="cookie-btn secondary" id="rejectCookies">Rechazar</button>
+            <button type="button" class="cookie-btn light" id="openCookieModal">Configurar</button>
+            <button type="button" class="cookie-btn primary" id="acceptCookies">Aceptar</button>
+        </div>
+    </div>
+</aside>
+
+<section id="cookieModal" class="cookie-modal" aria-hidden="true">
+    <div class="cookie-modal-card" role="dialog" aria-modal="true" aria-label="Configurar cookies">
+        <h3>Configurar consentimiento</h3>
+        <p>Selecciona qué tipo de cookies deseas permitir.</p>
+        <label class="cookie-option">
+            <input type="checkbox" checked disabled>
+            <span><strong>Necesarias</strong> (siempre activas)</span>
+        </label>
+        <label class="cookie-option">
+            <input type="checkbox" id="analyticsCookies">
+            <span><strong>Analíticas</strong> (medición de visitas)</span>
+        </label>
+        <label class="cookie-option">
+            <input type="checkbox" id="marketingCookies">
+            <span><strong>Marketing</strong> (contenido personalizado)</span>
+        </label>
+        <div class="cookie-actions">
+            <button type="button" class="cookie-btn secondary" id="cancelCookieModal">Cancelar</button>
+            <button type="button" class="cookie-btn primary" id="saveCookiePreferences">Guardar preferencias</button>
+        </div>
+    </div>
+</section>
 
 <div id="wg-chat">
     <div class="wg-tooltip">¿Necesitas ayuda?</div>
